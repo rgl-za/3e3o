@@ -1,2 +1,2 @@
-# OperatingSystem-2021
-Term Project
+# 3e3o
+Mini Project
