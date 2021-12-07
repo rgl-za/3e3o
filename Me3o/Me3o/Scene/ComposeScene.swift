@@ -10,7 +10,7 @@ import SwiftUI
 struct ComposeScene: View{
     @EnvironmentObject var keyboard: KeyboardObserver
     @EnvironmentObject var store: MemoStore
-    @State private var content: String = ""
+    @State private var content: String = "" // 입력할 텍스트를 바인딩 할 때 사용 할 속성
     
     @Binding var showComposer: Bool
     
