@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MemoListScene: View{
-    @EnvironmentObject var store: MemoStore
+    @EnvironmentObject var store: MemoStore // 뷰가 생성되는 시점에 공유 데이터 목록 확인, store 속성과 동일한 형식을 가진 객체가 있다면 바로 저장
     @EnvironmentObject var formatter: DateFormatter
     
     @State var showCompose: Bool = false
@@ -60,7 +60,7 @@ fileprivate struct ModalButton: View{
 struct MemoListScene_Previews: PreviewProvider {
     static var previews: some View{
         MemoListScene()
-            .environmentObject(MemoStore())
+            .environmentObject(MemoStore()) // 사용할 메모 스토어를 커스텀 공유 데이터로 등록 
             .environmentObject(DateFormatter.memoDateFormatter)
     }
 }
