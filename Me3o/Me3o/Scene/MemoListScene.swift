@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct MemoListScene: View{
-<<<<<<< HEAD
     
     //EnvironmentObject: 뷰가 생성되는 시점에 공유 데이터 목록을 확인하고 store 속성과 동일한 객체가 등록되어 있다면 자동으로 저장
     
     @EnvironmentObject var store: MemoStore
-=======
-    @EnvironmentObject var store: MemoStore // 뷰가 생성되는 시점에 공유 데이터 목록 확인, store 속성과 동일한 형식을 가진 객체가 있다면 바로 저장
->>>>>>> 7c5c5eb0a12c7fc3a1a559b621fb978cad51e910
+
     @EnvironmentObject var formatter: DateFormatter
     
     @State var showCompose: Bool = false
