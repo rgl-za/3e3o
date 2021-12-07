@@ -14,7 +14,7 @@ class MemoStore: ObservableObject{
     // 배열을 Publushed 특성으로 선언시 배열을 업데이트 할 때마다 바인딩 되어 있는 뷰도 업데이트 됨
     
     init() { // 생성자 생성
-        list = [ // 더미 데이터 추가 
+        list = [ // 더미 데이터 추가
 
             Memo(content: "A"),
             Memo(content: "B"),
@@ -31,7 +31,7 @@ class MemoStore: ObservableObject{
     // 메모와 편집된 내용을 받음
     func update(memo: Memo?, content: String){
         guard let memo = memo else { return }
-        // 컨텐트 속성에 그대로 저장
+        
         memo.content = content
     }
     
@@ -43,10 +43,11 @@ class MemoStore: ObservableObject{
     }
     
     func delte(set: IndexSet){ // IndexSet을 받는 버전
-        for index in set { 
+        for index in set {
             self.list.remove(at: index)
         }
     }
 
 }
+
 
